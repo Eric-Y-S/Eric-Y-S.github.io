@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="science.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="sidebar ">
+        <div class="logo">
+            <a href="./index.html">
+                <i class='bx bx-dna'></i>
+                <span class="logo_name">Personal Web</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="./aboutme.html">
+                    <i class='bx bx-id-card' ></i>
+                    <span class="link_name">About Me</span>
+                </a>
+                <ul class="sub_menu blank">
+                    <li><a class="link_name" href="#">About Me</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="./science.html">
+                    <i class='bx bx-atom'></i>
+                    <span class="link_name">Science</span>
+                </a>
+                <ul class="sub_menu blank">
+                    <li><a class="link_name" href="#">Science</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="./skill&work.html">
+                    <i class='bx bx-library'></i>
+                    <span class="link_name">Skill & Work</span>
+                </a>
+                <ul class="sub_menu blank">
+                    <li><a class="link_name" href="#">Skill & Work</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="icon-links">
+                    <a href="#">
+                        <i class='bx bx-spreadsheet'></i>
+                        <span class="link_name">Project</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow' ></i>
+                </div>
+                <ul class="sub_menu">
+                    <li><a class="link_name" href="#">Project</a></li>
+                    <li><a href="#">Bio Info Book</a></li>
+                    <li><a href="#">lorem</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-bulb bx-flip-horizontal' ></i>
+                    <span class="link_name">Idea</span>
+                </a>
+            </li>
+            
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-party' ></i>
+                    <span class="link_name">Fun</span>
+                </a>
+            </li>
+        </ul>
+        <li>
+            <div class="profile">
+                <div class="profile_content">
+                    <img src="/image/blog/profile.jpg" alt="profile">
+                </div>
+                <div class="name_job">
+                    <div class="profile_name">Zikun Yang</div>
+                    <div class="profile_job">from SJTU</div>
+                </div>
+                
+            </div>
+        </li>
+    </div>
+    <section class="home_section">
+        <div class="home_content">
+            <i class='bx bx-menu' ></i>
+            <span class="text">Science</span>
+        </div>
+        <div class="page_content">
+            <div class="timeline"></div>
+            <ul class="time_list">
+                <li>
+                    <div class="box" style="top: 200px;right: 55%;">
+                        <div class="timeline_pic"><img src="./image/science/orangutan.jpg" alt=""></div>
+                        <div class="timeline_text"></div>
+                    </div>
+                    <div class="time_bar" style="top: 250px;right: 49.9%"></div>
+                    <div class="duration" style="top: calc(250px - 16px);right: calc(49.9% - 300px - 12px)"><p>2023.6.19 - 2023.9.10</p></div>
+                </li>
+                <li>
+                    <div class="box" style="top: 800px;left: 55%;">
+                        <div class="timeline_pic"><img src="./image/science/protein.png" alt=""></div>
+                        <div class="timeline_text"></div>
+                    </div>
+                    <div class="time_bar" style="top: 850px;right: calc(49.9%+30px)"></div>
+                    <div class="duration" style="top: calc(850px - 16px);left: calc(49.9% - 300px - 12px)"><p>2023.7.19 - 2023.9.10</p></div>
+                </li>
+                <li>
+                    <div class="box" style="top: 1400px;right: 55%;">
+                        <div class="timeline_pic"><img src="./image/science/future.jpg" alt=""></div>
+                        <div class="timeline_text_end"><p>wait to explore ...</p></div>
+                    </div>
+                    <div class="time_bar" style="top: 1450px;right: 49.9%"></div>
+                    <div class="duration" style="top: calc(1450px - 16px);right: calc(49.9% - 300px - 12px)"><p>Now -> ...</p></div>
+                </li>
+                <li>
+                    <div class="box" style="top: 2000px;left: 55%;scroll-snap-align: none;">
+                        <div class="timeline_pic"></div>
+                        <div class="timeline_text"></div>
+                    </div>
+                    <!-- + 1200px -->
+                </li>
+                <li>
+                    <div class="box" style="top: 2600px;right: 55%;scroll-snap-align: none;">
+                        <div class="timeline_pic"></div>
+                        <div class="timeline_text"></div>
+                    </div>
+                    <!-- + 1200px -->
+                </li>
+            </ul>
+        </div>
+        
+    </section>
+        
+    <script>
+
+    let arrow = document.querySelectorAll(".arrow")   
+    for (var i = 0 ; i < arrow.length ; i++){
+        arrow[i].addEventListener("click",(e)=>{
+        let arrowParent = e.target.parentElement.parentElement;
+
+        arrowParent.classList.toggle("showmenu");
+        });
+    }
+
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".bx-menu");
+    console.log(sidebarBtn)
+    sidebarBtn.addEventListener("click",()=>{
+        sidebar.classList.toggle("close")
+    });
+
+    </script>
+
+</body>
+</html>
